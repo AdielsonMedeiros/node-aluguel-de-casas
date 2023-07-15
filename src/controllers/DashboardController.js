@@ -2,7 +2,7 @@
 
 import House from "../models/House";
 
-class DashboaardController{
+class DashboardController{
     async show(req,res){
         const {user_id} = req.headers;
         const houses = await House.find({user: user_id});
@@ -11,4 +11,4 @@ class DashboaardController{
     }
 }
 
-export default new DashboaardController();
+export default new DashboardController();
